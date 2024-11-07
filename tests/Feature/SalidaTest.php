@@ -11,7 +11,6 @@ class SalidaTest extends TestCase
     /**
      * A basic feature test example.
      */
-    use RefreshDatabase;
 
     public function test_crear_salida()
     {
