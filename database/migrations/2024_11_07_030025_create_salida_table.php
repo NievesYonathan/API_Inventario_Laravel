@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('salida', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prducto_id');
+            $table->unsignedBigInteger('producto_id');
             $table->date('fecha_salida');
             $table->string('motivo', 255)->nullable();
             $table->integer('cantidad');
             $table->timestamps();
 
-            // Definir llave foranea
-            $table->foreign('prducto_id')
+            // Definir llave foránea
+            $table->foreign('producto_id')
                 ->references('id')
                 ->on('producto')
                 ->onDelete('no action');
