@@ -16,4 +16,14 @@ class Informe extends Model
         'salida_id',
         'fecha_informe'
     ];
+
+    public function entrada()
+    {
+        return $this->belongsTo(Entrada::class, 'entrada_id');
+    }
+
+    public function salida()
+    {
+        return $this->belongsTo(Salida::class, 'salida_id');
+    }
 }

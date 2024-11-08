@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Salida extends Model
+class Entrada extends Model
 {
     use HasFactory;
 
-    protected $table = 'salida';
+    protected $table = 'entrada';
 
     protected $fillable = [
         'producto_id',
-        'fecha_salida',
-        'motivo',
+        'fecha_entrada',
         'cantidad'
     ];
 
@@ -22,4 +21,5 @@ class Salida extends Model
     {
         return $this->belongsTo(Producto::class, 'producto_id');
     }
+
 }
